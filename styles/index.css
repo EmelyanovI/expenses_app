@@ -1,0 +1,101 @@
+body{
+    width: 100%;
+    padding: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    line-height: 39px;
+    font-weight: 400;
+    background-color: #ffffff;
+}
+.title{
+    font-size: 32px;
+    line-height: 39px;
+    font-weight: 700;
+}
+ol{
+    list-style: decimal;
+    list-style-position: inside;
+}
+.label{
+    font-weight: 700;
+}
+.expenses{
+    margin: 28px 0 0 0;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 28px 43px;
+}
+.expensesInput{
+    width: 484px;
+}
+.categorySelect{
+    margin: 18px 0 0 0;
+    width: 484px;
+    height: 58px;
+    padding: 0 0 0 22px;
+    font-size: inherit;
+    border: 1px solid #000;
+}
+.moneyInput{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 17px 9px 22px;
+    border: 1px solid #000;
+}
+.rub::after{
+    content: ' руб.'; 
+    font-family: 'Roboto';   
+}
+.moneyInput__input{
+    width: 100%;
+}
+.moneyInput__currency{
+    padding: 0 0 0 20px;
+}
+.moneyInput__input:focus-visible{
+    outline: none;
+}
+button {
+    font-family: 'Roboto';
+    cursor: pointer;
+}
+button:hover{
+    opacity: 0.5;
+}
+.addButton{
+    font-size: 'Roboto';
+    display: block;
+    padding: 10px 110px;
+    color: #ffffff;
+    background-color: #0094ff;
+    border: none;
+}
+.stats__changeLimitBtn{
+    width: 42px;
+    height: 42px;
+}
+.stats{
+    width: 484px;
+}
+.stats__status{
+    padding: 28px 0 0 0;
+}
+.stats__statusText_positive{
+    color: green;
+}
+.stats__statusText_negative{
+    color: red;
+}
+.history{
+    width: 384px;
+}
+.clearButton{
+    width: 484px;
+    color: #fff;
+    background-color: red;
+    display: block;
+    padding: 10px 110px;
+}
