@@ -13,7 +13,7 @@ const clearButtonNode = document.getElementById('clearButton');
 const totalValueNode = document.getElementById('totalValue');
 const statusNode = document.getElementById('statusText');
 const historyList = document.getElementById('historyList')
-const changeLimitBtn = document.getElementById('changeLimitBtn');
+const changeLimitBtn = document.getElementById('popupLimitBtn');
 
 //Получаем лимит из элемента HTML с id limitValue
 const limitNode = document.getElementById('limitValue');
@@ -21,12 +21,15 @@ let limit = parseInt(limitNode.innerText);
 
 function initLimit() {
     const limitFromStorage = parseInt(localStorage.getItem(STORAGE_LABEL_LIMIT));
-    if (!limitFromStorage) {
-        return;
-    }
+    if (!isNaN(limitFromStorage)) {
     limitNode.innerText = limitFromStorage;
-    limit = parseInt(limitNode.innerText);
-}
+    limit = limitFromStorage
+    } else {
+        limitNode.innerText = '10000';
+        limit = 10000;
+        localStorage.setItem(STATUS_OUT_IN_LIMIT, limit);
+    }
+};
 
 initLimit();
 
