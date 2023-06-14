@@ -39,7 +39,6 @@ let expenses = [];
 if (Array.isArray(expensesFromStorage)) {
     expenses = expensesFromStorage;
 }
-
 render();
 
 //---------Функции-------
@@ -99,7 +98,7 @@ function renderHistory() {
 }
 
 //Отрисовываем/обновляем весь интерфейс (в нашем случае - "Историю","Всего", "Статус")
-const render = () => {
+function render() {
     //вызываем функцию обновления статуса и всего
     renserStatus();
 
@@ -168,8 +167,6 @@ function addButtonHandler() {
 
     //сбрасываем веденную сумму
     clearInput(inputNode);
-
-    
 };
 
 //функция-обработчик кнопки Сбросить расходы
