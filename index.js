@@ -171,7 +171,7 @@ function addButtonHandler() {
 function clearButtonHandler() {
     expenses = [];
     render();
-    localStorage.clear();
+    window.localStorage.clear();
 }
 //фунция-обработчик (хендлер) кнопки изменения лимита
 function changeLimitHandler() {
