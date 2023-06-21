@@ -167,11 +167,18 @@ function addButtonHandler() {
     clearInput(inputNode);
 };
 
+// Добавление расхода по нажатию Enter
+inputNode.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      addButtonHandler();
+    }
+  });
+
 //функция-обработчик кнопки Сбросить расходы
 function clearButtonHandler() {
     expenses = [];
     render();
-    localStorage.clear();
+    localStorage.removeItem(STORAGE_LABEL_EXPENSES);
 }
 //фунция-обработчик (хендлер) кнопки изменения лимита
 function changeLimitHandler() {
