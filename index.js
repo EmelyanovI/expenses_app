@@ -178,7 +178,7 @@ inputNode.addEventListener("keydown", (event) => {
 function clearButtonHandler() {
     expenses = [];
     render();
-    localStorage.removeItem(STORAGE_LABEL_EXPENSES);
+    window.localStorage.clear();
 }
 //фунция-обработчик (хендлер) кнопки изменения лимита
 function changeLimitHandler() {
