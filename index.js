@@ -122,14 +122,9 @@ function getSelectedCategory() {
 //функция очистки поля ввода суммы
 //на вход получает переменную input, в которой мы ожидаем html элемент input
 
-//альтернатива
-// function clearInput(input) {
-//     input.value = '';
-// };
-
-const clearInput = (input) => {
+function clearInput(input) {
     input.value = '';
-};
+}
 
 function saveExpensesToStorage() {
     const expensesString = JSON.stringify(expenses);
@@ -176,6 +171,7 @@ function addButtonHandler() {
 function clearButtonHandler() {
     expenses = [];
     render();
+    localStorage.clear();
 }
 //фунция-обработчик (хендлер) кнопки изменения лимита
 function changeLimitHandler() {
